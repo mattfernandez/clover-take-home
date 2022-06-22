@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Clover Take Home Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Architectural choices
 
-## Available Scripts
+I kept the structure of the project very simple for the most part. I seperated the project into as many individual components as I thought were necessary in order to keep the code clean and readable. I made my two API calls (one for characters and one for character location) in the parent component that they were required and then passed them down via props to the component that they were used in.
 
-In the project directory, you can run:
+## Error Handling
 
-### `npm start`
+I check for errors when I make my API calls and override the behavior of the component if there is an error to show the error on the page instead of crashing the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Testing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I mainly tested this project using console logs to make sure all of the data i was expecting was coming in correctly and making sure that there were no edge cases that would cause errors to occur. I also made sure to conditionally check for each variable in the responses of the API calls using '?.' to make sure that if there was missing data in an api call, that the app would leave it blank rather than give an error.
 
-### `npm test`
+## Third Party Code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I did not use any external libaries for this assignment.
 
-### `npm run build`
+## Potential Changes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If I were to revisit this project to improve it I would spend more time focusing on the visual appearance of the app and the user experience. I would add animations to the characters when you open or close them. I would also consider changing the format to something responsive that takes into account the screen size. Lastly I would expand on the information shown for each character, such as episode appearances and origin information.
