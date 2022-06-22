@@ -4,7 +4,6 @@ import Character from './Character';
 
 const PageContent = () => {
   const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -12,11 +11,9 @@ const PageContent = () => {
       .then(res => res.json())
       .then(
         (result) => {
-          setIsLoaded(true);
           setCharacters(result.results);
         },
         (error) => {
-          setIsLoaded(true);
           setError(error);
         }
       )
@@ -25,8 +22,6 @@ const PageContent = () => {
 
   if (error) {
     return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
   } else {
   return (
     <>
