@@ -14,8 +14,8 @@ I mainly tested this project using console logs to make sure all of the data i w
 
 ## Third Party Code
 
-I did not use any external libaries for this assignment.
+I did not use any external libaries for this assignment. I did follow Reacts recommended way to make an api call using useEffect.
 
 ## Potential Changes
 
-If I were to revisit this project to improve it I would spend more time focusing on the visual appearance of the app and the user experience. I would add animations to the characters when you open or close them. I would also consider changing the format to something responsive that takes into account the screen size. Lastly I would expand on the information shown for each character, such as episode appearances and origin information.
+If I were to revisit this project to improve it I would spend more time focusing on the visual appearance of the app and the user experience. I would add animations to the characters when you open or close them. I would also consider changing the format to something responsive that takes into account the screen size. I would expand on the information shown for each character, such as episode appearances and origin information. Lastly I would switch my API calls to use async await, to follow more modern coding practices.
