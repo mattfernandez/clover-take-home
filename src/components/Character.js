@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Location from './Location'
 
 const Character = (character) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,10 +26,8 @@ const Character = (character) => {
   
   const buttonClick = () =>{
     setIsOpen(!isOpen)
-    console.log(!isOpen);
   }
-  console.log(location)
-  console.log(character)
+
 
 
 
@@ -45,13 +44,14 @@ const Character = (character) => {
           <div>
             <p>Status: <span class={character?.character?.status === "Alive" ? "alive" : "dead"}>{character?.character?.status}</span></p>
             <p>Species: {character?.character?.species} {character?.character?.species === "Alien" ? "👽" : "🕺"}</p>
-            <div className="location-info">
+            {/* <div className="location-info">
               <h3>Location:</h3>
               <p>Name: {location?.name}</p>
               <p>Type: {location?.type}</p>
               <p>Dimension: {location?.dimension}</p>
               <p># of Residents: {location?.residents?.length}</p>
-            </div>
+            </div> */}
+            <Location location={location}/>
           </div>
         </div>
         
